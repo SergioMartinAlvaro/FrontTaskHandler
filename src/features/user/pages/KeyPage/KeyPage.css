@@ -1,0 +1,19 @@
+.keyContainer {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  overflow: hidden;
+}
+
+.keyContainer__titleContainer {
+  margin-bottom: 24px;
+  font-size: 36px;
+}
+
+.keyContainer__textContainer {
+  transform: translateX(-10px);
+}
+
+.keyContainer__image {
+  margin-top: 12px;
+}

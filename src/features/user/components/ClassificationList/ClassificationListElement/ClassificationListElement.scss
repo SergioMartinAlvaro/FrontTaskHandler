@@ -1,0 +1,25 @@
+@import "../../../../../styles/global.scss";
+
+.classificationElement {
+    height: 40px;
+    width: 100%;
+    border-bottom: 3px solid getColor(black);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 16px;
+
+    &__title {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    &__score {
+        text-align: end;
+    }
+
+    &__number {
+        width: 34px;
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.541b0a75.css",
+    "main.js": "/static/js/main.96aeaad6.js",
+    "static/js/651.8cb32acf.chunk.js": "/static/js/651.8cb32acf.chunk.js",
+    "static/media/allPeeps.svg": "/static/media/allPeeps.c2d8e28626f82b54f5dd8ea303bbafbd.svg",
+    "static/media/Inter.ttf": "/static/media/Inter.853e01975d2783d9fa29.ttf",
+    "static/media/PatrickHand-Regular.ttf": "/static/media/PatrickHand-Regular.ec54a049bdef4be52511.ttf",
+    "static/media/peep3.svg": "/static/media/peep3.a0392607836e3ab399ebe5a8550e4b63.svg",
+    "static/media/loading.svg": "/static/media/loading.5bab7858d811f041c8509d25dd6d36f5.svg",
+    "static/media/peep10.svg": "/static/media/peep10.0fab6df0eebc97fa1e4a95a7d0314693.svg",
+    "static/media/peep14.svg": "/static/media/peep14.fdbc4edc69d2e44e6124f0d09fe205c6.svg",
+    "static/media/peep9.svg": "/static/media/peep9.c8397fe35f9e30aa4e475e644ce04431.svg",
+    "static/media/peep11.svg": "/static/media/peep11.57ebd77e5be11d52b2efb143a9733993.svg",
+    "static/media/peep6.svg": "/static/media/peep6.cbff8f7c1a9b07eda7631de966728763.svg",
+    "static/media/peep8.svg": "/static/media/peep8.c3f4018bb4156953e498aa7c3e40052f.svg",
+    "static/media/peep1.svg": "/static/media/peep1.3cbbe79e7c699328ace7bee9a0e3859f.svg",
+    "static/media/peep2.svg": "/static/media/peep2.270f067f7db6ca600200044f8d61e1c6.svg",
+    "static/media/peep12.svg": "/static/media/peep12.f571ddf4569b1b26680ee0a025978d94.svg",
+    "static/media/peep4.svg": "/static/media/peep4.5c123ee75fa91d170cccd65898341649.svg",
+    "static/media/peep5.svg": "/static/media/peep5.d827777589638d40088d21c7b15617f5.svg",
+    "static/media/peep13.svg": "/static/media/peep13.068b6caecc5e24eeb7a8a896a053635e.svg",
+    "static/media/peep7.svg": "/static/media/peep7.524f48386ee1f44e880d737b8299cf2a.svg",
+    "static/media/error.svg": "/static/media/error.801bf2f498929da76bc91afef4dd4b70.svg",
+    "static/media/info.svg": "/static/media/info.03862bca0b65f24efab1ea08a22ae81c.svg",
+    "static/media/Eliminar.svg": "/static/media/Eliminar.88ce8b75436dec3335f1354b3345224d.svg",
+    "static/media/Trophy.svg": "/static/media/Trophy.470cba46f91318a7fd2000ca33cc3c4b.svg",
+    "static/media/EyeOpen.svg": "/static/media/EyeOpen.4cb1adc7a7c7f7625c0d5684807a050c.svg",
+    "static/media/CloseIcon.svg": "/static/media/CloseIcon.773a0bfebcf87d06a1307515055c173a.svg",
+    "static/media/Modificar.svg": "/static/media/Modificar.984d206662d9373b09f1ce288271cb41.svg",
+    "static/media/Menu.svg": "/static/media/Menu.18e1fc33229c0eae6af6d34ff2ac4e0c.svg",
+    "static/media/rightArrow.svg": "/static/media/rightArrow.5938f11f4b39295ce18f2e7b9d67314c.svg",
+    "static/media/leftArrow.svg": "/static/media/leftArrow.9bfbec439dcf23c995fb0b7a16539890.svg",
+    "index.html": "/index.html",
+    "main.541b0a75.css.map": "/static/css/main.541b0a75.css.map",
+    "main.96aeaad6.js.map": "/static/js/main.96aeaad6.js.map",
+    "651.8cb32acf.chunk.js.map": "/static/js/651.8cb32acf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.541b0a75.css",
+    "static/js/main.96aeaad6.js"
+  ]
+}

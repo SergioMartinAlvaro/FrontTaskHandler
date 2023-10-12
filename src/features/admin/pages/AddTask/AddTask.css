@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Patrick";
+  src: url("../assets/fonts/PatrickHand-Regular.ttf");
+  font-weight: regular;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter.ttf");
+  font-weight: regular;
+  font-style: regular;
+}
+
+.addTask {
+  margin-top: 24px;
+}
+
+.addTask__title {
+  font-size: 36px;
+  font-family: "Inter";
+}
+
+.addTask__titleContainer {
+  margin-bottom: 32px;
+}
+
+.addTask__text {
+  font-size: 24px;
+  font-family: "Patrick";
+}

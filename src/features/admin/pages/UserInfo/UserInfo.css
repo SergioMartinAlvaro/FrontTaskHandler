@@ -1,0 +1,31 @@
+@font-face {
+  font-family: "Patrick";
+  src: url("../assets/fonts/PatrickHand-Regular.ttf");
+  font-weight: regular;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter.ttf");
+  font-weight: regular;
+  font-style: regular;
+}
+
+.userInfo {
+  margin-top: 24px;
+}
+
+.userInfo__title {
+  font-size: 52px;
+  font-family: "Inter";
+}
+
+.userInfo__titleContainer {
+  margin-bottom: 32px;
+}
+
+.userInfo__text {
+  font-size: 24px;
+  font-family: "Patrick";
+}
