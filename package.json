@@ -1,5 +1,5 @@
 {
-  "name": "taskappfront",
+  "name": "appCumple",
   "version": "0.1.0",
   "proxy": "http://localhost:3001",
   "private": true,
@@ -34,7 +34,7 @@
   },
   "scripts": {
     "sass:compile": "node-sass --recursive --output-style expanded src/ -o src/",
-    "start": "npm run sass:compile && react-scripts start",
+    "start": "react-scripts start",
     "start:dev": "react-scripts start --proxy setupProxy.js",
     "build": "npm run sass:compile && react-scripts build",
     "test": "react-scripts test",
