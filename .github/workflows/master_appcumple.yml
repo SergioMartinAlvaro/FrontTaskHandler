@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'appCumple'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1CD48201E23B437B8F5E6967BBA747A1 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E1E0B4FC2E0C45F298730847509E35A8 }}
           package: .
