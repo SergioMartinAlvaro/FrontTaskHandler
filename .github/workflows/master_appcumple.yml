@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - appCumple
+name: Build and deploy Node.js app to Azure Web App - TaskAppApis
 
 on:
   push:
@@ -23,8 +23,8 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install
-          npm run build --if-present
+          npm install --prefix
+          npm run build --if-present --prefix
           npm run test --if-present
 
       - name: Upload artifact for deployment job
@@ -50,7 +50,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'appCumple'
+          app-name: 'FrontTaskHandler'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E1E0B4FC2E0C45F298730847509E35A8 }}
-          package: .
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_106AF86F70334CACBCDEA3D028A064D2 }}
+          package: 'FRONT'
