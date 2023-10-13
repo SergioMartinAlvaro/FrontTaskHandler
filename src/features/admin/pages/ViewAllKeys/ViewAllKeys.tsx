@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from '../../../../store/store';
-import { deleteUser, getAllUsers } from '../../../../services/userService';
-import { removeUser, setAllTasks, setAllUsers } from '../../../../store/adminSlice';
+import { removeUser, setAllKeys, setAllTasks, setAllUsers } from '../../../../store/adminSlice';
 import { setMenuMessage } from '../../../../store/userSlice';
 import {ReactComponent as ModificarIcon} from '../../../../assets/icons/Modificar.svg';
 import {ReactComponent as EliminarIcon} from '../../../../assets/icons/Eliminar.svg';
@@ -10,50 +9,51 @@ import {ReactComponent as VerUsuario} from '../../../../assets/icons/EyeOpen.svg
 import AdminList from '../../components/AdminList/AdminList';
 import Modal from '../../../../components/Modal/Modal';
 import Button, { EButtonSize, EButtonType } from '../../../../components/Button/Button';
-import { IUser, emptyUser } from '../../../../models/IUser';
 import { useNavigate } from 'react-router-dom';
 import AdminFloatingButton from '../../components/AdminFloatingMenu/AdminFloatingMenu';
+import { IKey, emptyKey } from '../../../../models/IKey';
+import { deleteKey, getAllKeys } from '../../../../services/keyService';
 
-const AdminPanel = () => {
-    const stateAllUsers = useSelector((state: RootState) => state.admin.allUsers);
-    const [users, setUsers] = useState(stateAllUsers);
+const ViewAllKeys = () => {
+    const stateAllKeys = useSelector((state: RootState) => state.admin.allKeys);
+    const [keys, setKeys] = useState(stateAllKeys);
     const [itemList, setItemList] = useState([]);
     const [showModal, setShowModal] = useState(false);
-    const [userSelected, setUserSelected] = useState<IUser>(emptyUser);
+    const [keySelected, setKeySelected] = useState<IKey>(emptyKey);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     useEffect(() => {
-        if(stateAllUsers.length > 0) {
-            setUsers(stateAllUsers);
+        if(stateAllKeys.length > 0) {
+            setKeys(stateAllKeys);
             const newItemList = []
-            stateAllUsers.forEach(user => {
+            stateAllKeys.forEach((key, index) => {
                 newItemList.push({
-                    text: user.name,
+                    text: index,
                     icons: {
-                      Ver: {icon: <VerUsuario />, action: () => navigate(`/user/${user.id}`)},
-                      Modificar: { icon: <ModificarIcon />, action: () => navigate(`/edit-user/${user.id}`) },
-                      Eliminar: { icon: <EliminarIcon />, action: () => openModal(user) }
+                      Ver: {icon: <VerUsuario />, action: () => navigate(`/keys/${key.id}`)},
+                      Modificar: { icon: <ModificarIcon />, action: () => navigate(`/edit-key/${key.id}`) },
+                      Eliminar: { icon: <EliminarIcon />, action: () => openModal(key) }
                     },
                 })
             })
             setItemList(newItemList);
         }
-    }, [stateAllUsers]);
+    }, [stateAllKeys]);
 
-    const openModal = (user: IUser) => {
-        setUserSelected(user);
+    const openModal = (key: IKey) => {
+        setKeySelected(key);
         setShowModal(true);
     }
 
     const deleteUserAsync = async () => {
-        await deleteUser(userSelected.id).then(data => {
-            dispatch(setMenuMessage('Usuario borrado con éxito'));
-            dispatch(removeUser(userSelected));
-            setUserSelected(emptyUser);
+        await deleteKey(keySelected.id).then(data => {
+            dispatch(setMenuMessage('Llave borrada con éxito'));
+            dispatch(removeUser(keySelected));
+            setKeySelected(emptyKey);
         }).catch(() => {
-            dispatch(setMenuMessage('Error borrando al usuario'));
-            setUserSelected(emptyUser);
+            dispatch(setMenuMessage('Error borrando la llave'));
+            setKeySelected(emptyKey);
         }).finally(() => {
             setShowModal(false);
         })
@@ -71,32 +71,24 @@ const AdminPanel = () => {
       ];
 
     useEffect(() => {
-        const getAllUserData = async () => {
-            await getAllUsers().then(data => {
-                dispatch(setAllUsers(data));
+        const getAllKeyData = async () => {
+            await getAllKeys().then(data => {
+                dispatch(setAllKeys(data));
             }).catch((e) => {
                 console.log(e);
-                dispatch(setMenuMessage('Error obteniendo usuarios.'))
+                dispatch(setMenuMessage('Error obteniendo llaves.'))
             })
         }
 
-        dispatch(setAllTasks([]))
-        getAllUserData();
+        dispatch(setAllKeys([]))
+        getAllKeyData();
     }, [])
 
     const menuButtons = [
         {
-            text: "Añadir tarea a todos",
-            action: () => {navigate('/add-task-to-all')}
-        },
-        {
-            text: "Ver Llaves",
-            action: () => {navigate('/view-keys')}
-        },
-        {
-            text: "Añadir usuario",
-            action: () => {navigate('/add-user')}
-        },
+            text: "Añadir Llave",
+            action: () => {navigate('/add-key')}
+        }
     ]
 
   return (
@@ -109,11 +101,11 @@ const AdminPanel = () => {
         buttons={buttons}
         title=""
       >
-        <p style={{marginBottom: "24px"}}>¿Estás seguro de que quieres eliminar a este usuario?</p>
+        <p style={{marginBottom: "24px"}}>¿Estás seguro de que quieres eliminar esta llave?</p>
 
       </Modal>}
     </div>
   )
 }
 
-export default AdminPanel
+export default ViewAllKeys

@@ -16,6 +16,8 @@ import EditUser from "./features/admin/pages/EditUser/EditUser";
 import UserInfo from "./features/admin/pages/UserInfo/UserInfo";
 import AddTask from "./features/admin/pages/AddTask/AddTask";
 import AddUser from "./features/admin/pages/AddUser/AddUser";
+import AddKey from "./features/admin/pages/AddKey/AddKey";
+import ViewAllKeys from "./features/admin/pages/ViewAllKeys/ViewAllKeys";
 
 const RenderRoutes = () => {
   const isAuthenticated = useSelector(
@@ -116,6 +118,18 @@ const RenderRoutes = () => {
         path="/add-user"
         element={
           isAuthenticated && isAdmin ? <AddUser /> : <Navigate to="/login" />
+        }
+      />
+      <Route
+        path="/add-key"
+        element={
+          isAuthenticated && isAdmin ? <AddKey /> : <Navigate to="/login" />
+        }
+      />
+      <Route
+        path="/view-keys"
+        element={
+          isAuthenticated && isAdmin ? <ViewAllKeys /> : <Navigate to="/login" />
         }
       />
       {/* Otras rutas aquí */}

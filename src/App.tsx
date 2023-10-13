@@ -1,8 +1,8 @@
 // App.tsx
 import React, { useState } from 'react';
 
-import store, { RootState } from './store/store';
-import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
+import { RootState } from './store/store';
+import { BrowserRouter as Router } from 'react-router-dom';
 import RenderRoutes from './routes';
 import Menu from './components/Menu/Menu';
 import { useDispatch, useSelector } from 'react-redux';
