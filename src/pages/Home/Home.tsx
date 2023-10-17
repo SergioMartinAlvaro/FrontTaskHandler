@@ -42,6 +42,7 @@ const Home = () => {
   const [percentage, setPercentage] = useState<number>(0);
   const [message, setMessage] = useState<string>('');
 
+
   useEffect(() => {
     calculateProgressBar();
     handleUserHasAllTasksCompleted(user);
@@ -83,7 +84,7 @@ const Home = () => {
     } else if (completedTasks.length > 0 && todoTasks.length === 0) {
       dispatch(setMenuMessage(`Ya puedes obtener tu llave!`));
     } else {
-      dispatch(setMenuMessage(`Haz click en mi para volver atrás.`));
+      dispatch(setMenuMessage(`Hazme click para volver atrás.`));
     }
   }
 

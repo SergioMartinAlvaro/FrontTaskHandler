@@ -1,6 +1,11 @@
 @import "../../../styles/global.scss";
 
 .input {
+    &__container {
+        position: relative;
+        width: 100%;
+    }
+
     &__default {
         @include input-style;
         font-family: "Patrick";
@@ -8,5 +13,13 @@
         width: 100%;
         margin-bottom: 24px;
 
+    }
+
+    &__eye {
+        position: absolute;
+        z-index: 2;
+        width: auto;
+        top: 12px;
+        right: 12px;
     }
 }

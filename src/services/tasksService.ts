@@ -27,6 +27,29 @@ export const getAllTasksByUserId = async (userId: string) => {
   }
 };
 
+export const getTaskInfoById = async (taskId: string) => {
+  try {
+    const response = await api.get(`tasks/getTaskById/${taskId}`);
+
+    return response.data;
+  } catch (error) {
+    throw error.response?.data || error.message;
+  }
+};
+
+export const updateTask = async (taskId: string, task: ITask) => {
+  try {
+    const response = await api.put(`tasks/updateTask/${taskId}`, {
+      ...task
+    });
+
+    return response.data;
+  } catch (error) {
+    throw error.response?.data || error.message;
+  }
+};
+
+
 export const createTask = async (task: ITask) => {
   try {
     const response = await api.post("tasks/createTask", {

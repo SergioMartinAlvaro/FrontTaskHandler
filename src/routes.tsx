@@ -18,6 +18,7 @@ import AddTask from "./features/admin/pages/AddTask/AddTask";
 import AddUser from "./features/admin/pages/AddUser/AddUser";
 import AddKey from "./features/admin/pages/AddKey/AddKey";
 import ViewAllKeys from "./features/admin/pages/ViewAllKeys/ViewAllKeys";
+import EditTask from "./features/admin/pages/EditTask/EditTask";
 
 const RenderRoutes = () => {
   const isAuthenticated = useSelector(
@@ -130,6 +131,12 @@ const RenderRoutes = () => {
         path="/view-keys"
         element={
           isAuthenticated && isAdmin ? <ViewAllKeys /> : <Navigate to="/login" />
+        }
+      />
+      <Route
+        path="/edit-task/:value"
+        element={
+          isAuthenticated && isAdmin ? <EditTask /> : <Navigate to="/login" />
         }
       />
       {/* Otras rutas aquí */}
