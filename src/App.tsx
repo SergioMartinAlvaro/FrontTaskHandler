@@ -30,6 +30,12 @@ const App: React.FC = () => {
   }
 
   const devilUrls = [
+    'https://youtu.be/g2m8bYG37ms?si=nvdlZ0qKRS-AryCV',
+    'https://youtu.be/Xc-C3GJgP2A?si=QgTiLf0FPVZTQC88',
+    'https://www.youtube.com/watch?v=nftMxlKUgFM',
+    'https://www.youtube.com/watch?v=wL8A2yB5tAU',
+    'https://youtu.be/aizXQfR4JfY?si=Ry_uJ3UKVluRpOUq',
+    'https://www.youtube.com/watch?v=U3CTQR_c3Xs&pp=ygUaYWJ1ZWxvIGNhZ2FuZG8gZW4gZWwgY2FtcG8%3D',
     'https://www.youtube.com/watch?v=A_tcblaDKcQ',
     'https://www.youtube.com/watch?v=SmhIvur8xHg',
     'https://youtu.be/QrTfYItDDwA?si=GX1g--oTIK7KTlEF',
@@ -63,7 +69,17 @@ const App: React.FC = () => {
     'https://www.youtube.com/watch?v=hCnY74nxEPs',
     'https://www.youtube.com/watch?v=zm0_1NJPtDg',
     'https://www.youtube.com/watch?v=xRdSSUCf8eU',
-    'https://www.youtube.com/watch?v=tAmzDSYdNdw'
+    'https://www.youtube.com/watch?v=tAmzDSYdNdw',
+    'https://www.youtube.com/watch?v=7SLNMUS-d5Y&pp=ygUYbWVqb3JlcyBtb21lbnRvcyBtYXJpYW5v',
+    'https://www.youtube.com/watch?v=_idwF9qYBSA&pp=ygUMY2FuaSBiYXJyb2Nv',
+    'https://www.youtube.com/watch?v=Q8Oz-zwcsCk&pp=ygUWcGltIHBhbSB0b21hIGxhY2FzaXRvcw%3D%3D',
+    'https://youtu.be/FLTqt4zFbHg?si=7GzCFqh7iNzAVyE5',
+    'https://www.youtube.com/watch?v=Rzf18zhb_14',
+    'https://www.youtube.com/watch?v=xLlVYbTq9g0&t=663s',
+    'https://www.youtube.com/watch?v=vWD-TOlkDUE',
+    'https://www.youtube.com/watch?v=u08NGTmxp-E',
+    'https://www.youtube.com/watch?v=jBDu2cC11N0',
+    'https://www.youtube.com/watch?v=eYJKOmleeiw'
 
   ]
 
